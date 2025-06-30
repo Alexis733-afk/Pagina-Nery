@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homenaje a Nery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      flex-direction: column;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: #00796b;
+      font-style: italic;
+    }
+    p {
+      font-size: 1.6rem;
+      color: #333;
+      max-width: 800px;
+      font-style: italic;
+    }
+    .btn-tesla {
+      margin-top: 20px;
+      background-color: #00838f;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-style: italic;
+    }
+    .btn-tesla:hover {
+      background-color: #005662;
+    }
+    #tesla-container {
+      margin-top: 30px;
+      display: none;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    #tesla-container img {
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Reproductor de música de fondo -->
+  <iframe style="display:none;" width="0" height="0" src="https://www.youtube.com/embed/7_RVoLCx7MU?autoplay=1&loop=1&playlist=7_RVoLCx7MU" frameborder="0" allow="autoplay"></iframe>
+
+  <h1>¡Saludos, Ingeniero Nery!</h1>
+  <p>
+    Queremos reconocer a una persona admirable: amable, amigable, inteligente, con una actitud inquebrantable.
+    Nery, pase lo que pase, nunca te rindes. Le haces a todo: escribes historias fantásticas y te apasiona la tecnología.
+  </p>
+  <p>
+    Esta página fue creada con mucho amor para ti. ¡Feliz cumpleaños atrasado!
+  </p>
+  <p>
+    Espero que te lo hayas pasado de lo mejor en compañía de toda tu familia.
+  </p>
+
+  <div>
+    <button class="btn-tesla" onclick="mostrarTesla()">Ver a Nikola Tesla</button>
+  </div>
+
+  <div id="tesla-container">
+    <h2 style="font-size: 2rem; font-style: italic;">Tu inspiración:</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/N.Tesla.JPG" alt="Nikola Tesla" />
+    <p style="font-size: 1.4rem; font-style: italic;">Nikola Tesla (1856-1943), pionero de la electricidad y el sueño de todos los amantes de la innovación. ¡Como tú, Nery!</p>
+  </div>
+
+  <script>
+    function mostrarTesla() {
+      document.getElementById('tesla-container').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
