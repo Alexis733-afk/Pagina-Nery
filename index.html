@@ -61,12 +61,6 @@
 </head>
 <body>
 
-  <!-- Reproductor de música local -->
-  <audio autoplay loop hidden>
-    <source src="Steven Universe - L. Dre.mp3" type="audio/mpeg" />
-    Tu navegador no soporta audio HTML5.
-  </audio>
-
   <h1>¡Saludos, Ingeniero Nery!</h1>
   <p>
     Queremos reconocer a una persona admirable: amable, amigable, inteligente, con una actitud inquebrantable.
@@ -89,12 +83,27 @@
     <p style="font-size: 1.4rem; font-style: italic;">Nikola Tesla (1856-1943), pionero de la electricidad y el sueño de todos los amantes de la innovación. ¡Como tú, Nery!</p>
   </div>
 
+  <!-- Botón para reproducir música -->
+  <button onclick="document.getElementById('musica').play()" class="btn-tesla">🎵 Escucha</button>
+
+  <!-- Reproductor de música -->
+  <audio id="musica" loop>
+    <source src="Steven Universe - L. Dre.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
   <script>
     function mostrarTesla() {
       document.getElementById('tesla-container').style.display = 'block';
     }
+
+    // Intentar reproducir al hacer clic en cualquier parte
+    document.addEventListener('click', function () {
+      const audio = document.getElementById('musica');
+      if (audio && audio.paused) {
+        audio.play();
+      }
+    });
   </script>
 </body>
-  Steven Universe - L. Dre.mp3
-
 </html>
